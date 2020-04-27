@@ -18,18 +18,18 @@ public class Example
 	   	Console.WriteLine("1. Codificar Base64");
 	   	Console.WriteLine("2. Decodificar Base64");
 		string OpcionString=Console.ReadLine();
-			try{
+		try{
 	   		Opcion = Convert.ToInt16(OpcionString);
 			break;
-			}catch(Exception)
-			{
+		}catch(Exception)
+		{
 			Console.WriteLine("Error, las unicas opciones disponibles son 1 y 2");
 			//repetir
-			}
-	   	}
+		}
+	   }
 
-	   	switch (Opcion)
-	   	{
+	   switch (Opcion)
+	   {
 		case 1:   
 			// Entrada
 	   		Console.WriteLine("Ingrese el texto que desea pasar a base64:");
@@ -50,7 +50,7 @@ public class Example
 			try
 			{
 				bytes = Convert.FromBase64String(base64);
-     			texto = Encoding.ASCII.GetString(bytes);
+     				texto = Encoding.ASCII.GetString(bytes);
 				Console.WriteLine("La cadena de texto base64 "+base64+" significa: "+texto);
 			}
 			catch(Exception)
