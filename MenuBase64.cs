@@ -5,12 +5,14 @@ public class Example
 {
    public static void Main()
    {  	 
-	   	bool Repetir=true;
-	   	int Opcion=1;
-	   	String texto,base64;
-	   	byte[] bytes;
-	while(Repetir){
-	   	while(Repetir){
+	bool Repetir=true;
+	int Opcion=1;
+	String texto,base64;
+	byte[] bytes;
+	while(Repetir)
+	{
+	   while(Repetir)
+	   {
 		Console.WriteLine("====================================================");
 	   	Console.WriteLine("Presione");
 	   	Console.WriteLine("1. Codificar Base64");
@@ -26,25 +28,25 @@ public class Example
 			}
 	   	}
 
-	   switch (Opcion)
-	   {
-		   case 1:   
+	   	switch (Opcion)
+	   	{
+		case 1:   
 			// Entrada
 	   		Console.WriteLine("Ingrese el texto que desea pasar a base64:");
 	   		texto=Console.ReadLine();
-       		// Conversion cadena String en Byte Array
+       			// Conversion cadena String en Byte Array
 	   		bytes = Encoding.ASCII.GetBytes(texto);  
 			foreach ( byte b in bytes){}
-       		// Convertir Byte Array en cadena de texto base64.
-       		base64 = Convert.ToBase64String(bytes);
-       		Console.WriteLine("La cadena de texto base64 de "+texto+" es: "+base64+"\n");
-		   break;
+       			// Convertir Byte Array en cadena de texto base64.
+       			base64 = Convert.ToBase64String(bytes);
+       			Console.WriteLine("La cadena de texto base64 de "+texto+" es: "+base64+"\n");
+		break;
 		   
 	   		case 2:
-        	// Volver de cadena de texto en base64 a Byte Array.
+        		// Volver de cadena de texto en base64 a Byte Array.
 			Console.WriteLine("Ingrese el base64 que desa decodificar:");
 			base64=Console.ReadLine();
-     		//Volver de Byte Array a Cadena String.
+     			//Volver de Byte Array a Cadena String.
 			try
 			{
 				bytes = Convert.FromBase64String(base64);
@@ -55,11 +57,11 @@ public class Example
 			{
 				Console.WriteLine("Error, el base64 ingresado no tiene significado");
 			}
-		   break;
+		break;
 			   
-		   default:
+		default:
 			 Console.WriteLine("Error, la opcion seleccionada no hace parte de las opciones disponibles \n");  
-			   break;
+		break;
 	  }
    	}
 	//repetir
