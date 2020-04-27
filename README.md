@@ -1,7 +1,7 @@
 # Codificar_Decodificar_Base64
 Este código permite convertir cadenas de texto en Base64 y decodificar cadenas Base64 retornando su cadena de texto correspondiente.
 
-{
+```
 using System;
 using System.Text;
 public class Example
@@ -68,4 +68,4 @@ public class Example
 	//repetir
   }
 }
-}
+```
