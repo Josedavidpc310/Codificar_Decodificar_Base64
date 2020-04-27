@@ -12,7 +12,7 @@ public class Example
 	   	int Opcion=1;
 	   	String texto,base64;
 	   	byte[] bytes;
-	while(Repetir){
+		while(Repetir){
 	   	while(Repetir){
 		Console.WriteLine("====================================================");
 	   	Console.WriteLine("Presione");
@@ -35,19 +35,19 @@ public class Example
 			// Entrada
 	   		Console.WriteLine("Ingrese el texto que desea pasar a base64:");
 	   		texto=Console.ReadLine();
-       		// Conversion cadena String en Byte Array
+       			// Conversion cadena String en Byte Array
 	   		bytes = Encoding.ASCII.GetBytes(texto);  
 			foreach ( byte b in bytes){}
-       		// Convertir Byte Array en cadena de texto base64.
+       			// Convertir Byte Array en cadena de texto base64.
        		base64 = Convert.ToBase64String(bytes);
        		Console.WriteLine("La cadena de texto base64 de "+texto+" es: "+base64+"\n");
 		   break;
 		   
 	   		case 2:
-        	// Volver de cadena de texto en base64 a Byte Array.
+        		// Volver de cadena de texto en base64 a Byte Array.
 			Console.WriteLine("Ingrese el base64 que desa decodificar:");
 			base64=Console.ReadLine();
-     		//Volver de Byte Array a Cadena String.
+     			//Volver de Byte Array a Cadena String.
 			try
 			{
 				bytes = Convert.FromBase64String(base64);
